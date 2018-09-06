@@ -1,0 +1,20 @@
+#!/bin/bash
+sudo apt-get update
+sudo apt-get install -y curl
+sudo apt-get install -y python3-pip
+sudo pip3 install jupyter
+sudo apt-get update
+sudo apt-get install -y default-jre
+sudo apt-get install -y scala
+pip3 install py4j
+pip3 install tweepy
+pip3 install findspark
+pip3 install textBlob
+pip3 install boto3
+pip3 install pandas
+pip3 install numpy
+sudo apt-get install tmux
+
+
+
+
