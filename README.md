@@ -3,6 +3,10 @@ Twitter Streaming with Spark
 #Recommeded Udemy Course : https://www.udemy.com/apache-spark-streaming-with-python-and-pyspark by Matthew McAteer
 Code referrence from there
 
+Steps to follow for setting up a Twitter App:-
+
+https://iag.me/socialmedia/how-to-create-a-twitter-app-in-8-easy-steps/
+
 Steps to follow for Download of Oracle Virtual Box :-
 
 https://linus.nci.nih.gov/bdge/installUbuntu.html
