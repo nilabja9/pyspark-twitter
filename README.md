@@ -6,7 +6,7 @@ Referrence: Recommeded Udemy Course : https://www.udemy.com/apache-spark-streami
 Pass a particular topic on to the Twitter API and find out the most popular hashtag in a certain period of time - and theire respective sentiments associated with it - namely Positivem Negative or Neutral. Subjectivity of the tweet is also measured.
 
 ## Solution and Architecture:
-
+https://user-images.githubusercontent.com/35825748/56085011-211cec80-5e02-11e9-8691-41946a004856.jpg
 
 
 ## Pre-requisite Steps:
