@@ -54,5 +54,5 @@ Once the tweet starts flowing into the port, the Spark Streaming context kicks i
 
 ![Results2](https://user-images.githubusercontent.com/35825748/56085217-67c01600-5e05-11e9-8aa8-0b1b8eaf5c6f.png)
 
-
-
+For a detailed process oriented overview, kindly the below video:
+[https://www.youtube.com/watch?v=eSw6sq3KVtg](url)
