@@ -1,7 +1,24 @@
-# pyspark-twitter
-Twitter Streaming with Spark
-#Recommeded Udemy Course : https://www.udemy.com/apache-spark-streaming-with-python-and-pyspark by Matthew McAteer
-Code referrence from there
+# Twitter Streaming App - Capturing hashtag traffic for Texas Senate Elections
+Referrence: Recommeded Udemy Course : https://www.udemy.com/apache-spark-streaming-with-python-and-pyspark by Matthew McAteer
+
+## Objective:
+
+
+
+
+## Solution and Architecture:
+
+# Pre-requisite Steps:
+
+
+
+
+## End Result:
+
+
+
+
+
 
 Steps to follow for setting up a Twitter App:-
 
