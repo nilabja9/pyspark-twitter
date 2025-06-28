@@ -39,10 +39,24 @@ def clean_tweet(tweet):
     return ' '.join(re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)", " ", str(tweet)).split())
 
 
-#Polarity analysis of a tweet
+def analyze_sentiment_combined(tweet):
+    cleaned_tweet = clean_tweet(tweet)
+    analysis = TextBlob(cleaned_tweet)
+    
+    if analysis.sentiment.polarity > 0:
+        polarity = 1
+    elif analysis.sentiment.polarity == 0:
+        polarity = 0
+    else:
+        polarity = -1
+    
+    subjectivity = str(analysis.sentiment.subjectivity)
+    
+    return polarity, subjectivity
+
+#Polarity analysis of a tweet (kept for backward compatibility)
 def analyze_sentiment_polarity(tweet):
     analysis = TextBlob(clean_tweet(tweet))
-    # return str(analysis.sentiment.polarity)
     if analysis.sentiment.polarity > 0:
         return 1
     elif analysis.sentiment.polarity == 0:
@@ -50,14 +64,14 @@ def analyze_sentiment_polarity(tweet):
     else:
         return -1
 
-#subjectivity analysis of a tweet
+#subjectivity analysis of a tweet (kept for backward compatibility)
 def analyze_sentiment_subjectivity(tweet):
     analysis = TextBlob(clean_tweet(tweet))
     return str(analysis.sentiment.subjectivity)
 
 
-#Transforming using basic spark functions
-sentiment = lines.map(lambda text: (text, analyze_sentiment_polarity(text), analyze_sentiment_subjectivity(text)))
+#Transforming using basic spark functions - optimized to avoid redundant sentiment analysis
+sentiment = lines.map(lambda text: (text,) + analyze_sentiment_combined(text))
 words = lines.flatMap(lambda text: text.split(" ")).filter(lambda text: text.lower().startswith('#'))
 
 fields = ("hashtags", "count")
